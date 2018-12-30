@@ -1,0 +1,186 @@
+﻿@model Web1.Models.VENDOR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VENDOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LOCCODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOCCODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMPANY_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMPANY_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SHORT_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SHORT_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PREFIXTAG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PREFIXTAG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACTIVE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACTIVE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALIDFROM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALIDFROM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALIDTILL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALIDTILL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADDRESS1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADDRESS1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADDRESS2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADDRESS2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHONE1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONE1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHONE2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONE2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZIPCODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZIPCODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAILID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAILID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MODBY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MODBY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MODON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MODON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CREATEDON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CREATEDON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EFFDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EFFDT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TRANSPORTERID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,153 @@
+﻿@model IEnumerable<Web1.Models.VENDOR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPANY_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SHORT_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PREFIXTAG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACTIVE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALIDFROM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALIDTILL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADDRESS1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADDRESS2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHONE1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHONE2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZIPCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAILID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MODBY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MODON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CREATEDON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EFFDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOCCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPANY_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHORT_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PREFIXTAG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACTIVE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALIDFROM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALIDTILL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADDRESS1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADDRESS2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHONE1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHONE2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZIPCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAILID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MODBY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MODON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CREATEDON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EFFDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TRANSPORTERID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TRANSPORTERID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TRANSPORTERID })
+        </td>
+    </tr>
+}
+
+</table>
