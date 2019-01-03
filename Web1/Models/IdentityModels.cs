@@ -29,5 +29,7 @@ namespace Web1.Models
         {
             return new ApplicationDbContext();
         }
+
+      
     }
 }

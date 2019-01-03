@@ -1,4 +1,4 @@
-namespace Web1.Models
+namespace Web1.Areas.Masters.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;
@@ -31,10 +31,14 @@ namespace Web1.Models
         [StringLength(1)]
         public string ACTIVE { get; set; }
 
-        [Display(Name = "Date Valid from")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Valid From")]
         public DateTime? VALIDFROM { get; set; }
 
-        [Display(Name = "Date valid Till")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Valid Till")]
         public DateTime? VALIDTILL { get; set; }
 
         [StringLength(250)]
@@ -77,7 +81,7 @@ namespace Web1.Models
         [Display(Name = "Modified On")]
         public DateTime? MODON { get; set; }
 
-        [Display(Name = "Date Created On Name")]
+        [Display(Name = "Date Created On")]
         public DateTime? CREATEDON { get; set; }
 
         public DateTime? EFFDT { get; set; }

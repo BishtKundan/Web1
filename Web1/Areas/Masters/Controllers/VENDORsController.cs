@@ -1,4 +1,4 @@
-﻿namespace Web1.Controllers
+﻿namespace Web1.Areas.Masters.Controllers
 {
     using System.Data.Entity;
     using System.Net;
@@ -6,6 +6,7 @@
     using System.Web.Mvc;
     using Web1.Models;
 
+    [Authorize]
     public class VENDORsController : Controller
     {
         private mvc5Context db = new mvc5Context();
@@ -23,7 +24,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            VENDOR vENDOR = await db.VENDORs.FindAsync(id);
+            Web1.Areas.Masters.Models.VENDOR vENDOR = await db.VENDORs.FindAsync(id);
             if (vENDOR == null)
             {
                 return HttpNotFound();
@@ -42,7 +43,7 @@
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "TRANSPORTERID,LOCCODE,COMPANY_NAME,SHORT_NAME,PREFIXTAG,ACTIVE,VALIDFROM,VALIDTILL,ADDRESS1,ADDRESS2,CITY,PHONE1,PHONE2,ZIPCODE,EMAILID,FNAME,MNAME,LNAME,MODBY,MODON,CREATEDON,EFFDT")] VENDOR vENDOR)
+        public async Task<ActionResult> Create([Bind(Include = "TRANSPORTERID,LOCCODE,COMPANY_NAME,SHORT_NAME,PREFIXTAG,ACTIVE,VALIDFROM,VALIDTILL,ADDRESS1,ADDRESS2,CITY,PHONE1,PHONE2,ZIPCODE,EMAILID,FNAME,MNAME,LNAME,MODBY,MODON,CREATEDON,EFFDT")]  Web1.Areas.Masters.Models.VENDOR vENDOR)
         {
             if (ModelState.IsValid)
             {
@@ -61,7 +62,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            VENDOR vENDOR = await db.VENDORs.FindAsync(id);
+            Web1.Areas.Masters.Models.VENDOR vENDOR = await db.VENDORs.FindAsync(id);
             if (vENDOR == null)
             {
                 return HttpNotFound();
@@ -74,7 +75,7 @@
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "TRANSPORTERID,LOCCODE,COMPANY_NAME,SHORT_NAME,PREFIXTAG,ACTIVE,VALIDFROM,VALIDTILL,ADDRESS1,ADDRESS2,CITY,PHONE1,PHONE2,ZIPCODE,EMAILID,FNAME,MNAME,LNAME,MODBY,MODON,CREATEDON,EFFDT")] VENDOR vENDOR)
+        public async Task<ActionResult> Edit([Bind(Include = "TRANSPORTERID,LOCCODE,COMPANY_NAME,SHORT_NAME,PREFIXTAG,ACTIVE,VALIDFROM,VALIDTILL,ADDRESS1,ADDRESS2,CITY,PHONE1,PHONE2,ZIPCODE,EMAILID,FNAME,MNAME,LNAME,MODBY,MODON,CREATEDON,EFFDT")]  Web1.Areas.Masters.Models.VENDOR vENDOR)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +93,7 @@
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            VENDOR vENDOR = await db.VENDORs.FindAsync(id);
+            Web1.Areas.Masters.Models.VENDOR vENDOR = await db.VENDORs.FindAsync(id);
             if (vENDOR == null)
             {
                 return HttpNotFound();
@@ -105,7 +106,7 @@
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            VENDOR vENDOR = await db.VENDORs.FindAsync(id);
+            Web1.Areas.Masters.Models.VENDOR vENDOR = await db.VENDORs.FindAsync(id);
             db.VENDORs.Remove(vENDOR);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");

@@ -15,6 +15,7 @@
         {
         }
 
-        public System.Data.Entity.DbSet<Web1.Models.VENDOR> VENDORs { get; set; }
+        public System.Data.Entity.DbSet<Web1.Areas.Masters.Models.VENDOR> VENDORs { get; set; }
+        public System.Data.Entity.DbSet<Web1.Areas.Masters.Models.VEHICLE> VEHICLEs { get; set; }
     }
 }

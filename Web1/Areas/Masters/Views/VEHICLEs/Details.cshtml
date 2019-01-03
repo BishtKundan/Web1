@@ -1,0 +1,150 @@
+﻿@model Web1.Areas.Masters.Models.VEHICLE
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>VEHICLE</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.transporterid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.transporterid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.regno)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.regno)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vehicleno)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vehicleno)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.vehicletypecode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.vehicletypecode)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.bpid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.bpid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dtmanufacture)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dtmanufacture)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.active)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.active)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.kmlimit)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.kmlimit)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.createdon)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.createdon)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.modon)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.modon)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.modby)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.modby)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.effdt)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.effdt)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.loccode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.loccode)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.isgpsinstalled)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.isgpsinstalled)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.gps_install_date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.gps_install_date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.remarks)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.remarks)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.vehicleid }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

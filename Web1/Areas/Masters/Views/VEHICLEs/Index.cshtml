@@ -1,0 +1,127 @@
+﻿@model IEnumerable<Web1.Areas.Masters.Models.VEHICLE>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.transporterid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.regno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vehicleno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vehicletypecode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bpid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dtmanufacture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.kmlimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.createdon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modby)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.effdt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.loccode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isgpsinstalled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gps_install_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remarks)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.transporterid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.regno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vehicleno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.vehicletypecode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bpid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dtmanufacture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kmlimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.createdon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.modon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.modby)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.effdt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.loccode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isgpsinstalled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gps_install_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remarks)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.vehicleid }) |
+                @Html.ActionLink("Details", "Details", new { id=item.vehicleid }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.vehicleid })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
