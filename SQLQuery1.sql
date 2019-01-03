@@ -1,0 +1,1 @@
+﻿select * from  vw_vendor where TRANSPORTERID = 101

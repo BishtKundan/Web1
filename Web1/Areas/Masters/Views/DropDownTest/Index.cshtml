@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Drop Down Test";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />  
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+@Html.DropDownList("Id", (SelectList)ViewBag.Vendors, "--Select One--", new { onchange = "GetUserDetails(this);" })
+<div id="dvUserDetails">
+    <p> </p>
+</div>
+<script type="text/javascript">
+    function GetUserDetails(obj) {
+        var selectedUser = $(obj).val();
+
+        //Load the PartialView
+
+        var urlToHit = '/Masters/DropDownTest/VendorDetail';
+
+        //alert(selectedUser);
+
+        $.ajax({
+            url: urlToHit,
+            cache: false,
+            type: "POST",
+            data: { id: selectedUser },
+            success: function (data) {
+                //alert(data);
+                $("#dvUserDetails").html(data);
+            },
+            error: function () {
+                alert("failed 123");
+            }
+
+        });
+
+        //Json
+        /*
+        var urlToHit = '/DropDownTest/Index';
+        $.ajax({
+            url: urlToHit,
+            cache: false,
+            type: "POST",
+            data: { id: selectedUser },
+            success: function (data) {
+                if (data.Data != "null") {
+                    data = data || {}
+                    var userName = data.Name;
+                    var des = data.Des;
+                    alert(userName + ";" + des);
+                }
+            },
+            error: function () {
+                alert("failed");
+            }
+
+        });
+        */
+    }
+</script>

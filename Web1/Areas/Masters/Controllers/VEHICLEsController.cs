@@ -36,30 +36,29 @@ namespace Web1.Areas.Masters.Controllers
             }
             return View(vEHICLE);
         }
-
-
-        private static List<SelectListItem> GetVendors()
-        {
-            KBDBEntities entities = new KBDBEntities();
-            List<SelectListItem> VendorList = (from p in entities.vw_vendor.AsEnumerable()
-                                                 select new SelectListItem
-                                                 {
-                                                     Text = p.Company_name,
-                                                     Value = p.TRANSPORTERID.ToString()
-                                                 }).ToList();
-
-
-            //Add Default Item at First Position.
-            VendorList.Insert(0, new SelectListItem { Text = "--Select Vendor--", Value = "" });
-            return VendorList;
-        }
-        
+                      
         // GET: Masters/VEHICLEs/Create
         public ActionResult Create()
         {
             List<SelectListItem> Vendors = GetVendors();
             ViewBag.Vendors = Vendors;
             return View();
+        }
+
+        private static List<SelectListItem> GetVendors()
+        {
+            KBDBEntities entities = new KBDBEntities();
+            List<SelectListItem> VendorList = (from p in entities.vw_vendor.AsEnumerable()
+                                               select new SelectListItem
+                                               {
+                                                   Text = p.Company_name,
+                                                   Value = p.TRANSPORTERID.ToString()
+                                               }).ToList();
+
+
+            //Add Default Item at First Position.
+            VendorList.Insert(0, new SelectListItem { Text = "--Select Vendor--", Value = "" });
+            return VendorList;
         }
 
         // POST: Masters/VEHICLEs/Create

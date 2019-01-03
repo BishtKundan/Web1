@@ -175,6 +175,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Masters\Controllers\DropDownTestController.cs" />
     <Compile Include="Areas\Masters\Controllers\VEHICLEsController.cs" />
     <Compile Include="Areas\Masters\MastersAreaRegistration.cs" />
     <Compile Include="Areas\Masters\Models\MasterList.Context.cs">
@@ -248,6 +249,8 @@
     <Content Include="Areas\Masters\Models\MasterList.edmx.diagram">
       <DependentUpon>MasterList.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Masters\Views\DropDownTest\Index.cshtml" />
+    <Content Include="Areas\Masters\Views\DropDownTest\VendorDetail.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

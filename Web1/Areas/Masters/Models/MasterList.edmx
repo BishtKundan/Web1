@@ -10,7 +10,6 @@ warning 6002: The table/view 'KBDB.dbo.vw_vendor' does not have a primary key de
         <EntityType Name="vw_vendor">
           <Key>
             <PropertyRef Name="TRANSPORTERID" />
-            <PropertyRef Name="Company_name" />
           </Key>
           <Property Name="TRANSPORTERID" Type="int" Nullable="false" />
           <Property Name="Company_name" Type="varchar" MaxLength="200" Nullable="false" />
@@ -31,7 +30,6 @@ warning 6002: The table/view 'KBDB.dbo.vw_vendor' does not have a primary key de
         <EntityType Name="vw_vendor">
           <Key>
             <PropertyRef Name="TRANSPORTERID" />
-            <PropertyRef Name="Company_name" />
           </Key>
           <Property Name="TRANSPORTERID" Type="Int32" Nullable="false" />
           <Property Name="Company_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
